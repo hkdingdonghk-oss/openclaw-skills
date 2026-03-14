@@ -1,106 +1,73 @@
 # 🧠 Smart Memory System
 
-Enhanced 4-layer memory architecture for OpenClaw.
-
-## Four-Layer Memory Model
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                    CONTEXT WINDOW                        │
-│  ┌─────────────┐  ┌─────────────┐  ┌───────────────┐  │
-│  │ Working     │  │  Session    │  │  LLM Context  │  │
-│  │ Memory      │  │  History    │  │  (real-time)  │  │
-│  │ (Buffer)    │  │             │  │               │  │
-│  └─────────────┘  └─────────────┘  └───────────────┘  │
-├─────────────────────────────────────────────────────────┤
-│                    LONG-TERM STORAGE                     │
-│  ┌─────────────┐  ┌─────────────┐  ┌───────────────┐  │
-│  │ Episodic    │  │ Semantic    │  │ Procedural    │  │
-│  │ (Timeline)  │  │ (Knowledge  │  │ (Skills/      │  │
-│  │ What        │  │  Graph)     │  │  Patterns)    │  │
-│  │ happened    │  │  Facts +    │  │  How to       │  │
-│  │             │  │  Relations  │  │  succeed      │  │
-│  └─────────────┘  └─────────────┘  └───────────────┘  │
-└─────────────────────────────────────────────────────────┘
-```
-
----
+Enhanced 4-layer memory with **auto-inject** for conversations.
 
 ## Auto-Inject Feature
 
-When you mention these triggers, I automatically search memory:
-- 記得 / remember / 之前
-- 點整 / how to / 點解
-- 用戶名 / preferences
-- ComfyUI / EvoMap / tools
+When you mention trigger words, I automatically search and include relevant memories in my response!
 
-### Usage
+### Triggers
+- 記得 / 之前 / 上次
+- 點整 / 點解 / 點樣
+- 用戶 / 業 / ComfyUI / EvoMap
+- setup / 整 / 做
 
-```javascript
-import { searchMemoryForContext, checkAndInjectContext } from './memory-hook.js';
-
-// Manual search
-const context = searchMemoryForContext('ComfyUI', 3);
-console.log(context);
-
-// Auto-check (returns null if no triggers detected)
-const relevant = checkAndInjectContext('記得ComfyUI點整?');
+### How It Works
+```
+You: 記得ComfyUI點整?
+Me: [auto-search] → 📚 相關記憶: [14/3/2026] ComfyUI Startup steps...
 ```
 
 ---
 
 ## Functions
 
-### saveKeyFact(fact, category)
-Save important fact to semantic memory.
+### checkAndInject(userMessage)
+Returns relevant memory if triggers detected, null otherwise.
 
-### recordEvent(event, intent, outcome)
-Record episodic event with timestamp.
-
-### saveProcedure(name, steps, scenario)
-Save successful workflow pattern.
-
-### searchMemory(query, timeRange, limit)
-Search across all memory layers.
+### shouldSearchMemory(message)
+Returns true if message contains trigger words.
 
 ### searchMemoryForContext(query, maxResults)
-Format results for conversation context.
+Returns formatted memory results.
 
-### checkAndInjectContext(userMessage)
-Auto-detect triggers and return relevant memory.
-
----
-
-## Memory Structure
-
-```
-memory/
-├── .db.json              # Main database
-├── episodes/             # Timeline logs
-│   └── YYYY-MM-DD.md
-├── graph/
-│   └── entities/       # Facts
-└── procedures/         # Success patterns
-```
-
-## Cron Job
-
-Daily maintenance at 21:00 Hong Kong time.
+### getMemoryStats()
+Returns total entries and breakdown by type.
 
 ---
 
-## Example
+## Usage
 
-**User:** 記得之前整既ComfyUI workflow?
+```javascript
+import { checkAndInject, getMemoryStats } from './auto-inject.js';
 
-**System auto-searches:**
+// Auto-inject in conversation
+const injection = checkAndInject(userMessage);
+if (injection) {
+  response += injection;
+}
+
+// Get stats
+const stats = getMemoryStats();
+console.log(stats); // { total: 19, byType: {...} }
 ```
-[14/3/2026] # ComfyUI Startup
-Scenario: Starting ComfyUI server
-Steps:
-1. source ~/miniconda3/bin/activate ai_env
-2. cd ~/ComfyUI
-3. python main.py --listen 0.0.0.0 --port 8188
-```
 
-Then includes this in the response automatically.
+---
+
+## Current Stats
+- **Total:** 19 entries
+- **Semantic:** 17 (facts)
+- **Episodic:** 1 (events)
+- **Procedural:** 1 (workflows)
+
+---
+
+## Integration
+
+The system is now integrated - when you ask about:
+- ComfyUI → injects setup steps
+- EvoMap → injects node info
+- 業 (you) → injects your profile
+- etc.
+
+No manual search needed! 🎯
