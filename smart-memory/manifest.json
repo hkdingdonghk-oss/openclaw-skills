@@ -1,0 +1,19 @@
+{
+  "name": "smart-memory",
+  "version": "1.0.0",
+  "description": "分層混合記憶系統：工作記憶緩衝、情景記憶時間軸、語義知識圖譜、程序性記憶",
+  "author": "小蕉",
+  "license": "MIT",
+  "main": "src/index.js",
+  "type": "skill",
+  "permissions": [
+    "fs:write",
+    "fs:read"
+  ],
+  "config": {
+    "db_path": "./memory/.db.json",
+    "max_context_tokens": 4096
+  },
+  "dependencies": {},
+  "openclaw_version": ">=1.0.0"
+}

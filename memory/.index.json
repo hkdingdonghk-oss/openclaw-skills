@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "created": "2026-03-14",
+  "layers": {
+    "episodic": "memory/episodes/",
+    "semantic": "memory/graph/",
+    "procedural": "memory/procedures/"
+  }
+}

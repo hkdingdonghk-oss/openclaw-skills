@@ -1,0 +1,276 @@
+{
+  "entries": [
+    {
+      "id": "1773481258922-asvm8mx0l",
+      "content": "用戶prefer簡潔直接既溝通風格",
+      "type": "semantic",
+      "timestamp": 1773481258922,
+      "tags": [
+        "preferences"
+      ],
+      "metadata": {
+        "category": "preferences"
+      }
+    },
+    {
+      "id": "1773481520302-i4yneksxs",
+      "content": "用戶叫業,香港,半退休",
+      "type": "semantic",
+      "timestamp": 1773481520302,
+      "tags": [
+        "user_info"
+      ],
+      "metadata": {
+        "category": "user_info"
+      }
+    },
+    {
+      "id": "1773481520302-pdr98j8oa",
+      "content": "佢學緊ComfyUI、AI、3D建模",
+      "type": "semantic",
+      "timestamp": 1773481520302,
+      "tags": [
+        "learning"
+      ],
+      "metadata": {
+        "category": "learning"
+      }
+    },
+    {
+      "id": "1773481520303-jx5jmnak5",
+      "content": "溝通偏好簡潔直接",
+      "type": "semantic",
+      "timestamp": 1773481520303,
+      "tags": [
+        "preferences"
+      ],
+      "metadata": {
+        "category": "preferences"
+      }
+    },
+    {
+      "id": "1773481520303-fb83t37pa",
+      "content": "Intent: setup ComfyUI environment | setup_comfyui | Outcome: success",
+      "type": "episodic",
+      "timestamp": 1773481520303,
+      "tags": [
+        "event"
+      ],
+      "metadata": {
+        "userIntent": "setup ComfyUI environment",
+        "outcome": "success"
+      }
+    },
+    {
+      "id": "1773481520304-kkt55hc7v",
+      "content": "# ComfyUI Startup\n\nScenario: Starting ComfyUI server\n\nSteps:\n1. source ~/miniconda3/bin/activate ai_env\n2. cd ~/ComfyUI\n3. python main.py --listen 0.0.0.0 --port 8188",
+      "type": "procedural",
+      "timestamp": 1773481520304,
+      "tags": [
+        "comfyui-startup",
+        "success-pattern"
+      ]
+    },
+    {
+      "id": "1773481670966-vmabudt4b",
+      "content": "用戶: 業(Yip), 香港, 半退休",
+      "type": "semantic",
+      "timestamp": 1773481670966,
+      "tags": [
+        "user_info"
+      ],
+      "metadata": {
+        "category": "user_info"
+      }
+    },
+    {
+      "id": "1773481670966-1jou77hk9",
+      "content": "語言: 廣東話/中文",
+      "type": "semantic",
+      "timestamp": 1773481670966,
+      "tags": [
+        "preferences"
+      ],
+      "metadata": {
+        "category": "preferences"
+      }
+    },
+    {
+      "id": "1773481670967-qce6k29en",
+      "content": "溝通: 簡潔直接, 重要既即刻講",
+      "type": "semantic",
+      "timestamp": 1773481670967,
+      "tags": [
+        "preferences"
+      ],
+      "metadata": {
+        "category": "preferences"
+      }
+    },
+    {
+      "id": "1773481670967-5rzqcjgzx",
+      "content": "學習: ComfyUI, AI, 3D建模(Fusion360)",
+      "type": "semantic",
+      "timestamp": 1773481670967,
+      "tags": [
+        "learning"
+      ],
+      "metadata": {
+        "category": "learning"
+      }
+    },
+    {
+      "id": "1773481670967-p5dp1naba",
+      "content": "目標: 建立強大既AI助手",
+      "type": "semantic",
+      "timestamp": 1773481670967,
+      "tags": [
+        "goals"
+      ],
+      "metadata": {
+        "category": "goals"
+      }
+    },
+    {
+      "id": "1773482528004-ua4ooht5d",
+      "content": "EvoMap node_id: node_fbe0471f6016340b",
+      "type": "semantic",
+      "timestamp": 1773482528004,
+      "tags": [
+        "system"
+      ],
+      "metadata": {
+        "category": "system"
+      }
+    },
+    {
+      "id": "1773482528004-zsn5xu7bi",
+      "content": "EvoMap claimed: 2026-03-14",
+      "type": "semantic",
+      "timestamp": 1773482528004,
+      "tags": [
+        "system"
+      ],
+      "metadata": {
+        "category": "system"
+      }
+    },
+    {
+      "id": "1773482772708-fr29kjc8e",
+      "content": "EvoMap heartbeat cron: 每15分鐘一次",
+      "type": "semantic",
+      "timestamp": 1773482772708,
+      "tags": [
+        "system"
+      ],
+      "metadata": {
+        "category": "system"
+      }
+    },
+    {
+      "id": "1773482772709-vpgqbrve2",
+      "content": "EvoMap credits: 6934",
+      "type": "semantic",
+      "timestamp": 1773482772709,
+      "tags": [
+        "system"
+      ],
+      "metadata": {
+        "category": "system"
+      }
+    },
+    {
+      "id": "1773482899044-qgbqmiypr",
+      "content": "EvoMap node_id: node_a63e0a566236cbf6 (新)",
+      "type": "semantic",
+      "timestamp": 1773482899044,
+      "tags": [
+        "system"
+      ],
+      "metadata": {
+        "category": "system"
+      }
+    },
+    {
+      "id": "1773482899045-kh3mqto7u",
+      "content": "EvoMap secret: 568e3ba8c270e1fba3d12282f721e42084b3d92492bbcd5f76f7d2f77341f8aa",
+      "type": "semantic",
+      "timestamp": 1773482899045,
+      "tags": [
+        "system"
+      ],
+      "metadata": {
+        "category": "system"
+      }
+    }
+  ],
+  "entities": [
+    {
+      "id": "1773481670968-9ik3p2k81",
+      "name": "業",
+      "facts": [],
+      "category": "system",
+      "createdAt": 1773481670968,
+      "updatedAt": 1773481670968
+    },
+    {
+      "id": "1773481670968-28zdknb3k",
+      "name": "ComfyUI",
+      "facts": [],
+      "category": "system",
+      "createdAt": 1773481670968,
+      "updatedAt": 1773481670968
+    },
+    {
+      "id": "1773481670968-rvtqtup4l",
+      "name": "Fusion360",
+      "facts": [],
+      "category": "system",
+      "createdAt": 1773481670968,
+      "updatedAt": 1773481670968
+    },
+    {
+      "id": "1773481670968-e4io92l8o",
+      "name": "OpenClaw",
+      "facts": [],
+      "category": "system",
+      "createdAt": 1773481670968,
+      "updatedAt": 1773481670968
+    },
+    {
+      "id": "1773481670969-x43ls7vp4",
+      "name": "RTX_2080_Ti",
+      "facts": [],
+      "category": "system",
+      "createdAt": 1773481670969,
+      "updatedAt": 1773481670969
+    }
+  ],
+  "relations": [
+    {
+      "from": "Procedural Memory",
+      "relation": "contains",
+      "to": "ComfyUI Startup"
+    },
+    {
+      "from": "業",
+      "relation": "uses",
+      "to": "ComfyUI"
+    },
+    {
+      "from": "業",
+      "relation": "uses",
+      "to": "Fusion360"
+    },
+    {
+      "from": "業",
+      "relation": "runs",
+      "to": "OpenClaw"
+    },
+    {
+      "from": "ComfyUI",
+      "relation": "on",
+      "to": "RTX_2080_Ti"
+    }
+  ]
+}
